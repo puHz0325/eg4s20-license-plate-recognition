@@ -1,0 +1,92 @@
+{
+  "format": "eg4s20-recognition-release-v1",
+  "date": "2026-10-31",
+  "top": "teacher_video_top",
+  "bit": "minimal/fpga/teacher_video_p1.bit",
+  "bit_sha256": "0dcc73e3fa692c37b07edd84f24ebd36e31a0a3f0a66558b2e7cddcefa229538",
+  "model": {
+    "format": "teacher-model-identity-v1",
+    "model_sha256": "10e190ea58a2d8706338923bea83ada74eab1e3144e3ab9c4e5918d5b69cb1c4",
+    "crc32": "D5CA7402",
+    "model_bytes": 156256,
+    "build_id": "20261028",
+    "package": "car_test/train/accuracy_stage3/robust_int8_04",
+    "float_run": "car_test/train/accuracy_stage3/qat_run_04",
+    "float_sha256": "5ea1171e364d2512bb1d8a2250a98d19a6bafd60382915902ed1a710c56ce0fd"
+  },
+  "source_layout": "Original car_test tree retained; host build/test paths configurable",
+  "camera": {
+    "interface": "OV5640 DVP",
+    "source_wh": [
+      640,
+      480
+    ],
+    "channel": "R8",
+    "roi_xywh": [
+      128,
+      176,
+      384,
+      128
+    ],
+    "input_wh": [
+      128,
+      32
+    ]
+  },
+  "resources": {
+    "lut": {
+      "used": 15400,
+      "available": 19600
+    },
+    "reg": {
+      "used": 6868,
+      "available": 19600
+    },
+    "dsp": {
+      "used": 19,
+      "available": 29
+    },
+    "bram": {
+      "used": 40,
+      "available": 64
+    },
+    "bram32k": {
+      "used": 0,
+      "available": 16
+    },
+    "pll": {
+      "used": 2,
+      "available": 4
+    }
+  },
+  "timing_errors": 0,
+  "critical_warnings": [
+    "PHY-7002 CRITICAL-WARNING: Instance memory location (12, 12) is not honored.",
+    "PHY-7002 CRITICAL-WARNING: Instance memory location (164, 288) is not honored.",
+    "PHY-7002 CRITICAL-WARNING: Instance memory location (164, 288) is not honored.",
+    "PHY-7002 CRITICAL-WARNING: Instance memory location (164, 288) is not honored."
+  ],
+  "prior_validation": {
+    "frozen_inferences": 30,
+    "layer_crc_matches": 240,
+    "camera_layer_crc_matches": 8,
+    "mean_fpga_ms": 532.8773893333333,
+    "video_checks": 13,
+    "cnn_compared_elements": 475648
+  },
+  "minimal_source_changes": "Only ROM asset path prefixes changed; prebuilt bit unchanged",
+  "model_loading": "UART after each FPGA reconfiguration/power-up; no Flash writer",
+  "limitations": [
+    "Fixed-position single seven-character plate",
+    "No parking records or clock",
+    "No raw datasets or EDA binaries",
+    "PHY-7002 SDRAM placement warnings retained; long-duration stability not signed off"
+  ],
+  "python_versions": {
+    "pyserial": "3.5",
+    "numpy": "2.2.6",
+    "opencv-python": "4.12.0.88",
+    "torch": "2.10.0+cu130",
+    "Pillow": "12.1.0"
+  }
+}

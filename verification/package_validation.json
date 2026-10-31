@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checks": {
+    "release_hashes": "PASS",
+    "stdlib_only_model_check": "PASS",
+    "runtime_tests": "PASS",
+    "full_model_identity": "PASS",
+    "prepare_frozen_oracle": "PASS",
+    "python_compile": "PASS",
+    "minimal_logic_identity": "PASS",
+    "secret_scan": "PASS",
+    "minimal_vlib": "PASS",
+    "vendor_models": "PASS",
+    "minimal_legacy_compile": "PASS",
+    "minimal_modern_compile": "PASS",
+    "minimal_rom_elaboration": "PASS",
+    "td_project_open": "PASS"
+  },
+  "relocated": true,
+  "recompiled_rtl": true,
+  "minimal_hdl_language": "TD Verilog; ModelSim per-source Verilog/SystemVerilog as original runner",
+  "minimal_compile_units": {
+    "legacy": 17,
+    "modern": 20
+  },
+  "new_synthesis_or_route": false,
+  "bit_unchanged": true,
+  "credentials_included": false
+}

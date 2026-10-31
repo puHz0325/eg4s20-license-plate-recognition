@@ -1,0 +1,8 @@
+# Frozen source/ROM SHA256 records include original line endings.
+# Preserve bytes across Windows/Linux clones rather than converting EOLs.
+* -text
+*.bit -diff
+*.bin -diff
+*.pth -diff
+*.npz -diff
+*.zip -diff

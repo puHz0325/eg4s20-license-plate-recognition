@@ -1,0 +1,25 @@
+// CRCs of complete HWC integer-reference layer bytes, not predictions.
+`define BOARD_CRC_0_0 32'h15dbe70f
+`define BOARD_CRC_0_1 32'hff7d33dd
+`define BOARD_CRC_0_2 32'h305020c4
+`define BOARD_CRC_0_3 32'h3f8ec0e0
+`define BOARD_CRC_0_4 32'h2d5a7cbb
+`define BOARD_CRC_0_5 32'hc314e3cb
+`define BOARD_CRC_0_6 32'hfc8bb8ed
+`define BOARD_CRC_0_7 32'h285eb1bd
+`define BOARD_CRC_1_0 32'hccbe46ad
+`define BOARD_CRC_1_1 32'hc09fc74f
+`define BOARD_CRC_1_2 32'h9dc97b46
+`define BOARD_CRC_1_3 32'h97fabe9c
+`define BOARD_CRC_1_4 32'h37339f5b
+`define BOARD_CRC_1_5 32'hffc9e145
+`define BOARD_CRC_1_6 32'h42ba0545
+`define BOARD_CRC_1_7 32'hd76a103c
+`define BOARD_CRC_2_0 32'h825542dc
+`define BOARD_CRC_2_1 32'h242c21cc
+`define BOARD_CRC_2_2 32'hf8f176b1
+`define BOARD_CRC_2_3 32'hf1e98719
+`define BOARD_CRC_2_4 32'h82e14087
+`define BOARD_CRC_2_5 32'h7ab95a1a
+`define BOARD_CRC_2_6 32'hcc92eafe
+`define BOARD_CRC_2_7 32'h7fd2e6ee

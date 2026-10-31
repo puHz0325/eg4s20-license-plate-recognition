@@ -1,0 +1,30 @@
+{
+  "seed": 2026102901,
+  "contract": {
+    "format": "teacher-r8-linear-v1",
+    "source_wh": [
+      640,
+      480
+    ],
+    "roi_xywh": [
+      128,
+      176,
+      384,
+      128
+    ],
+    "input_wh": [
+      128,
+      32
+    ],
+    "channel": "R8",
+    "resize": "opencv_INTER_LINEAR_half_pixel",
+    "fixed_camera_rule": "out[v,u]=(R[177+4*v,129+3*u]+R[178+4*v,129+3*u]+1)>>1",
+    "normalization": "(pixel-127.5)/128",
+    "integer_input": "2*pixel-255, signed9, fraction8",
+    "placement": "Complete plate and a small margin must fit inside the ROI; upright single plate only."
+  },
+  "sha256": {
+    "preprocess_frame.hex": "77c6be9223ffa4c00c9c01dacd574c193aadfa81c9d59814574872abb79002d6",
+    "preprocess_expected.hex": "12bd3a0e837e46521aec8954d8400b49813555f4c2e232c0f121da2b667daecd"
+  }
+}

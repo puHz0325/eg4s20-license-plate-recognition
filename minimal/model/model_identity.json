@@ -1,0 +1,10 @@
+{
+  "format": "teacher-model-identity-v1",
+  "model_sha256": "10e190ea58a2d8706338923bea83ada74eab1e3144e3ab9c4e5918d5b69cb1c4",
+  "crc32": "D5CA7402",
+  "model_bytes": 156256,
+  "build_id": "20261028",
+  "package": "car_test/train/accuracy_stage3/robust_int8_04",
+  "float_run": "car_test/train/accuracy_stage3/qat_run_04",
+  "float_sha256": "5ea1171e364d2512bb1d8a2250a98d19a6bafd60382915902ed1a710c56ce0fd"
+}

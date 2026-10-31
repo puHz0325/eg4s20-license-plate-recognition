@@ -1,0 +1,35 @@
+{
+  "status": "TRAINING_COMPLETE",
+  "best_epoch": 4,
+  "epochs_run": 10,
+  "validation_qualified": true,
+  "baseline": {
+    "main": 0.9574787393696849,
+    "non_anhui": 0.8853383458646616,
+    "supported_macro": 0.8875759903252565,
+    "robust_mean": 0.283203125
+  },
+  "candidate": {
+    "main": 0.955727863931966,
+    "non_anhui": 0.8984962406015038,
+    "supported_macro": 0.9003752898869785,
+    "robust_mean": 0.8603515625
+  },
+  "model_state_sha256": "5ea1171e364d2512bb1d8a2250a98d19a6bafd60382915902ed1a710c56ce0fd",
+  "model_options": {
+    "class_num": 68,
+    "input_height": 32,
+    "channels": [
+      16,
+      32,
+      48,
+      64,
+      64,
+      128
+    ],
+    "extra_prepool": true,
+    "context_kernel": 7
+  },
+  "elapsed_seconds": 410.9539999999997,
+  "deployment": "Not evaluated on fixed test or INT8; original FPGA program remains active"
+}

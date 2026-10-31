@@ -1,0 +1,333 @@
+{
+  "format": "teacher-sdram-int8-v1",
+  "input_wh": [
+    128,
+    32
+  ],
+  "classes": 68,
+  "ctc_steps": 32,
+  "layers": [
+    {
+      "index": 0,
+      "input_hwc": [
+        32,
+        128,
+        1
+      ],
+      "conv_hwc": [
+        32,
+        128,
+        16
+      ],
+      "output_hwc": [
+        32,
+        128,
+        16
+      ],
+      "kernel_hw": [
+        3,
+        3
+      ],
+      "padding_hw": [
+        1,
+        1
+      ],
+      "pool_hw": [
+        1,
+        1
+      ],
+      "weight_offset_bytes": 0,
+      "weight_bytes": 144,
+      "bias_index": 0,
+      "bias_count": 16,
+      "shift": 9,
+      "relu": true,
+      "output_bits": 8,
+      "weight_address_bytes": 1048576,
+      "bias_address_bytes": 1203088
+    },
+    {
+      "index": 1,
+      "input_hwc": [
+        32,
+        128,
+        16
+      ],
+      "conv_hwc": [
+        32,
+        128,
+        16
+      ],
+      "output_hwc": [
+        16,
+        64,
+        16
+      ],
+      "kernel_hw": [
+        3,
+        3
+      ],
+      "padding_hw": [
+        1,
+        1
+      ],
+      "pool_hw": [
+        2,
+        2
+      ],
+      "weight_offset_bytes": 144,
+      "weight_bytes": 2304,
+      "bias_index": 16,
+      "bias_count": 16,
+      "shift": 7,
+      "relu": true,
+      "output_bits": 8,
+      "weight_address_bytes": 1048720,
+      "bias_address_bytes": 1203152
+    },
+    {
+      "index": 2,
+      "input_hwc": [
+        16,
+        64,
+        16
+      ],
+      "conv_hwc": [
+        16,
+        64,
+        32
+      ],
+      "output_hwc": [
+        8,
+        32,
+        32
+      ],
+      "kernel_hw": [
+        3,
+        3
+      ],
+      "padding_hw": [
+        1,
+        1
+      ],
+      "pool_hw": [
+        2,
+        2
+      ],
+      "weight_offset_bytes": 2448,
+      "weight_bytes": 4608,
+      "bias_index": 32,
+      "bias_count": 32,
+      "shift": 8,
+      "relu": true,
+      "output_bits": 8,
+      "weight_address_bytes": 1051024,
+      "bias_address_bytes": 1203216
+    },
+    {
+      "index": 3,
+      "input_hwc": [
+        8,
+        32,
+        32
+      ],
+      "conv_hwc": [
+        8,
+        32,
+        48
+      ],
+      "output_hwc": [
+        8,
+        32,
+        48
+      ],
+      "kernel_hw": [
+        3,
+        3
+      ],
+      "padding_hw": [
+        1,
+        1
+      ],
+      "pool_hw": [
+        1,
+        1
+      ],
+      "weight_offset_bytes": 7056,
+      "weight_bytes": 13824,
+      "bias_index": 64,
+      "bias_count": 48,
+      "shift": 8,
+      "relu": true,
+      "output_bits": 8,
+      "weight_address_bytes": 1055632,
+      "bias_address_bytes": 1203344
+    },
+    {
+      "index": 4,
+      "input_hwc": [
+        8,
+        32,
+        48
+      ],
+      "conv_hwc": [
+        8,
+        32,
+        64
+      ],
+      "output_hwc": [
+        4,
+        32,
+        64
+      ],
+      "kernel_hw": [
+        3,
+        3
+      ],
+      "padding_hw": [
+        1,
+        1
+      ],
+      "pool_hw": [
+        2,
+        1
+      ],
+      "weight_offset_bytes": 20880,
+      "weight_bytes": 27648,
+      "bias_index": 112,
+      "bias_count": 64,
+      "shift": 8,
+      "relu": true,
+      "output_bits": 8,
+      "weight_address_bytes": 1069456,
+      "bias_address_bytes": 1203536
+    },
+    {
+      "index": 5,
+      "input_hwc": [
+        4,
+        32,
+        64
+      ],
+      "conv_hwc": [
+        4,
+        32,
+        64
+      ],
+      "output_hwc": [
+        1,
+        32,
+        64
+      ],
+      "kernel_hw": [
+        3,
+        3
+      ],
+      "padding_hw": [
+        1,
+        1
+      ],
+      "pool_hw": [
+        4,
+        1
+      ],
+      "weight_offset_bytes": 48528,
+      "weight_bytes": 36864,
+      "bias_index": 176,
+      "bias_count": 64,
+      "shift": 7,
+      "relu": true,
+      "output_bits": 8,
+      "weight_address_bytes": 1097104,
+      "bias_address_bytes": 1203792
+    },
+    {
+      "index": 6,
+      "input_hwc": [
+        1,
+        32,
+        64
+      ],
+      "conv_hwc": [
+        1,
+        32,
+        128
+      ],
+      "output_hwc": [
+        1,
+        32,
+        128
+      ],
+      "kernel_hw": [
+        1,
+        1
+      ],
+      "padding_hw": [
+        0,
+        0
+      ],
+      "pool_hw": [
+        1,
+        1
+      ],
+      "weight_offset_bytes": 85392,
+      "weight_bytes": 8192,
+      "bias_index": 240,
+      "bias_count": 128,
+      "shift": 7,
+      "relu": true,
+      "output_bits": 8,
+      "weight_address_bytes": 1133968,
+      "bias_address_bytes": 1204048
+    },
+    {
+      "index": 7,
+      "input_hwc": [
+        1,
+        32,
+        128
+      ],
+      "conv_hwc": [
+        1,
+        32,
+        68
+      ],
+      "output_hwc": [
+        1,
+        32,
+        68
+      ],
+      "kernel_hw": [
+        1,
+        7
+      ],
+      "padding_hw": [
+        0,
+        3
+      ],
+      "pool_hw": [
+        1,
+        1
+      ],
+      "weight_offset_bytes": 93584,
+      "weight_bytes": 60928,
+      "bias_index": 368,
+      "bias_count": 68,
+      "shift": 3,
+      "relu": false,
+      "output_bits": 16,
+      "weight_address_bytes": 1142160,
+      "bias_address_bytes": 1204560
+    }
+  ],
+  "address_unit": "bytes; SDRAM controller requests use address>>2 and BL4 alignment",
+  "parameter_base_bytes": 1048576,
+  "weight_layout": "OIHW int8",
+  "bias_layout": "little-endian int32",
+  "weights_bytes": 154512,
+  "bias_bytes": 1744,
+  "model_bytes": 156256,
+  "crc32": "D5CA7402",
+  "model_sha256": "10e190ea58a2d8706338923bea83ada74eab1e3144e3ab9c4e5918d5b69cb1c4",
+  "caveat": "Parameter export only; RTL simulation, timing and hardware are verified separately."
+}

@@ -1,0 +1,36 @@
+{
+  "stage": "pnr",
+  "resources": {
+    "lut": {
+      "used": 15400,
+      "available": 19600
+    },
+    "reg": {
+      "used": 6868,
+      "available": 19600
+    },
+    "dsp": {
+      "used": 19,
+      "available": 29
+    },
+    "bram": {
+      "used": 40,
+      "available": 64
+    },
+    "bram32k": {
+      "used": 0,
+      "available": 16
+    },
+    "pll": {
+      "used": 2,
+      "available": 4
+    }
+  },
+  "critical_warnings": [
+    "PHY-7002 CRITICAL-WARNING: Instance memory location (12, 12) is not honored.",
+    "PHY-7002 CRITICAL-WARNING: Instance memory location (164, 288) is not honored.",
+    "PHY-7002 CRITICAL-WARNING: Instance memory location (164, 288) is not honored.",
+    "PHY-7002 CRITICAL-WARNING: Instance memory location (164, 288) is not honored."
+  ],
+  "timing_errors": 0
+}

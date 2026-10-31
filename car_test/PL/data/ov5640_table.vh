@@ -1,0 +1,3 @@
+`ifndef OV5640_TABLE_COUNT
+`define OV5640_TABLE_COUNT 265
+`endif

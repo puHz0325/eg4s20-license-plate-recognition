@@ -1,0 +1,20 @@
+{
+  "fpga/assets/osd_font0.hex": "68c62e62693bb1f22ec3c69315ab050b30d4079e402b3da0f14769ab5541019a",
+  "fpga/assets/osd_font1.hex": "616a7b610494447c18a86ed56b8f1cced82eb6dffedc4f2291b04f6893206637",
+  "fpga/assets/osd_font2.hex": "5a27bd96cf5e606f58072c5d6f15a1411c810818650e854df10c41cf55a1f939",
+  "fpga/assets/osd_font3.hex": "283c1a4a43b0d8da1d22d28dcaa4d3a3e34794ffc2203bca69c49e18ba36d3fc",
+  "fpga/assets/ov5640_vga_rgb888.hex": "e85a8cdfe071c3d4ce045d717572a44b0f0a64439522989486dd3e43f8d93090",
+  "fpga/create_project.tcl": "a3ba34e89a200d67b14e2bac9fd4e8f3cfa4ed92652ca29b8221c4f3773d558c",
+  "fpga/teacher_video.al": "85e71074f5c7d64abd8e89ba6caf3bd783c8ec6d2ac982178a8bf4e4d1f34e9b",
+  "fpga/teacher_video_p1.bit": "0dcc73e3fa692c37b07edd84f24ebd36e31a0a3f0a66558b2e7cddcefa229538",
+  "fpga/video.adc": "847e27d371183fda08a4799888e80350603d3eef7387ec179f53bb7a408e7618",
+  "fpga/video.sdc": "e07932af093663000498622c36d6c8ec53ab718dffd76b1903ed70e79e013488",
+  "fpga/video.v": "7d49c28b384784bb74189f2aeeeec5ec85a82331d6a9fadbf83c51f775da4677",
+  "host/start_camera.py": "8ace694a94148e78eae7803adf897bceb25e61fed51dd1beca3fe40ef51a086e",
+  "LICENSES/ST_OV5640.txt": "92ee3dd3e2eefc2ea2467855814a2a1c9f13fbaa388b03d001e5e6069a01e9cf",
+  "model/model_identity.json": "05cc33f9d50c2b2fb4606eda6372d8dca13406b91f28f19db85244af5d655b71",
+  "model/model_init.bin": "10e190ea58a2d8706338923bea83ada74eab1e3144e3ab9c4e5918d5b69cb1c4",
+  "README.md": "47b77c7d8a71b3f0e0b42c04c206b54545691d9ac161cbb5073693e33899ad44",
+  "requirements.txt": "7c3a7b075c67c54222834f80a92ff4a7651995b7e21c4e37370a7d90018c16de",
+  "start.ps1": "0220788f4ae080929bbd75ddbb8075f7af411966760bb78122a8655da456e406"
+}

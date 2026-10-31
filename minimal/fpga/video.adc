@@ -1,0 +1,28 @@
+set_pin_assignment {clk_50m} { LOCATION = R7; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {rst_n} { LOCATION = E3; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+set_pin_assignment {uart_rxd} { LOCATION = F12; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+set_pin_assignment {uart_txd} { LOCATION = D12; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {cam_pclk} { LOCATION = L1; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {cam_vsync} { LOCATION = M5; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {cam_href} { LOCATION = D1; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {cam_xclk} { LOCATION = L5; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {cam_rst_n} { LOCATION = K1; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {cam_pwdn} { LOCATION = K2; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {cam_scl} { LOCATION = M2; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+set_pin_assignment {cam_sda} { LOCATION = M3; IOSTANDARD = LVCMOS33; PULLTYPE = PULLUP; }
+set_pin_assignment {hdmi_clk_p} { LOCATION = P1; IOSTANDARD = LVDS33; }
+set_pin_assignment {hdmi_d0_p} { LOCATION = N1; IOSTANDARD = LVDS33; }
+set_pin_assignment {hdmi_d1_p} { LOCATION = P4; IOSTANDARD = LVDS33; }
+set_pin_assignment {hdmi_d2_p} { LOCATION = J3; IOSTANDARD = LVDS33; }
+set_pin_assignment {status_led[0]} { LOCATION = B14; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {status_led[1]} { LOCATION = B15; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {status_led[2]} { LOCATION = B16; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {status_led[3]} { LOCATION = C15; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {cam_data[0]} { LOCATION = H1; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {cam_data[1]} { LOCATION = J1; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {cam_data[2]} { LOCATION = G1; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {cam_data[3]} { LOCATION = H2; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {cam_data[4]} { LOCATION = F2; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {cam_data[5]} { LOCATION = F1; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {cam_data[6]} { LOCATION = E2; IOSTANDARD = LVCMOS33; }
+set_pin_assignment {cam_data[7]} { LOCATION = E1; IOSTANDARD = LVCMOS33; }

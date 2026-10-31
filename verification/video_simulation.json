@@ -1,0 +1,146 @@
+{
+  "status": "PASS",
+  "inputs": {
+    "car_test/PL/teacher/rtl/teacher_byte_reader.v": "f17986b2d45ce4484163e756ccfc8767618f7138192f84e6d3a12e70cc4a996c",
+    "car_test/PL/teacher/rtl/teacher_ctc.v": "37bee967455b398cc556e1fbd7e04f3ae974cc56fad4c11a110b388eb9350084",
+    "car_test/PL/teacher/rtl/teacher_inference.v": "50d20535c0ac8f39261adc039b3b3e9dc9dee4543f7fc1eba9a34d8610827191",
+    "car_test/PL/teacher/rtl/teacher_mac8.v": "54f9438d9cb174ee6a8b6b8d1e34782d66d5da176b8b9a1b7e5a6e58e02d7801",
+    "car_test/PL/teacher/rtl/teacher_mem_arbiter.v": "48fe6661bdeba687637d1dae8e24c9f7e8f8c629da61f2ee84503eed266b96f4",
+    "car_test/PL/teacher/rtl/teacher_patch_buffer.v": "462f4f5d43824f3d849a9fd6a86841e276e47e8616f78c84970a8627e6bbb7ce",
+    "car_test/PL/teacher/rtl/teacher_patch_loader.v": "0db6e981e2aa14b311ef7dafb60534ea797e3ff932108fd66793e3e40e98d913",
+    "car_test/PL/teacher/rtl/teacher_store.v": "ebe4204015efff0681a57058ecd6acb8bb8a90cb09ef72344eb07664a2a8c1b8",
+    "car_test/PL/teacher/rtl/teacher_weight_buffer.v": "f397bc580c4e70d9f289870d316377da2baad3773adc4b4e1868590e5ff10b0b",
+    "car_test/PL/teacher/board/teacher_board_service.v": "c6369a09a91244d384cc6b336db961297024686e67237032488765ff8e1784c4",
+    "car_test/PL/teacher/board/teacher_sdram_adapter.v": "4a7f251438ab36f73b178e159e8b4653c07fdcdc4c3be872c62e65f89d8e74f1",
+    "car_test/PL/teacher/board/teacher_sdram_controller.v": "9b5487efeee1bd04c94a0d8a7aac9ff15466648760732e9ae98b08071da863e8",
+    "car_test/PL/teacher/video/teacher_camera_bridge.v": "6e6fb09c6974616496819e90ab4ec7ee681c116a680363e99385d60e38c59949",
+    "car_test/PL/teacher/video/teacher_mem_cdc.v": "eb7373d91a62c48dc5d257342ced2eb09f53d190406911048ddab379417b7069",
+    "car_test/PL/teacher/video/teacher_roi_snapshot.v": "3db33e7406fa74b06b98fe7f2446e6ed2fca68b8d0d45873941a905601fc7e20",
+    "car_test/PL/teacher/video/teacher_video_clocks.v": "b5250c3a611c274d32d844b7a1599acf787aed09e1d4511a99a93fcce6b1107d",
+    "car_test/PL/teacher/video/teacher_video_frontend.v": "70a6b21523a77720df09e2c6ccb942de05903ce5b04fc94d1f9a718ca47517eb",
+    "car_test/PL/teacher/video/teacher_video_memory.v": "62245812e599f21a388fd7d3735db9a48e7a72291414ac76ddfa8d1e2e38831a",
+    "car_test/PL/teacher/video/teacher_video_system.v": "720f31b0acc196dceaea94d8ed35290952ec77b6d48a7e32ed48b33a559201bb",
+    "car_test/PL/teacher/video/teacher_video_top.v": "5404a21fb6852742b64397d77ceb421001f78f0536bed094e195f466e88787e0",
+    "car_test/PL/src/video/dvp_capture.v": "13c0f221c8fd9b9923ca872251f61d25771427b898c8f325e908273f69fa34e2",
+    "car_test/PL/src/video/video_async_fifo.v": "dc47d5be5ec8ae9b7a93530bca4979a7f888fb4c58c7ae0cd67d3e2741f569b0",
+    "car_test/PL/src/video/video_frame_store.v": "1d66b418428200aaf73189b5df4dc7554bcc73575b6948fd56a2239213e4a296",
+    "car_test/PL/src/video/video_timing.v": "1a4c918c2c0dd27a011aff4dd7752f70b3d77ca3db0aa067a0e988f1e9ac4462",
+    "car_test/PL/src/video/video_display.v": "a6daaadb8db07b56785ddb5656344c7255cf356e4571a96b05b988b6ea80d264",
+    "car_test/PL/src/video/video_reset.v": "e72319e79c98c0196c94a9e36663790ba61fc157f75e96de02a6874ca9d5d7dc",
+    "car_test/PL/src/video/video_clocks.v": "f9104ab14978dd3571b01bf822fd02893b95e04dbc8c91e93f6bf3229d493fc2",
+    "car_test/PL/src/video/tmds_encoder.v": "d30210a81e82e6599091d283875185b7b558e5e063b3c082e0bc49bde816bc36",
+    "car_test/PL/src/video/tmds_serializer.v": "3b958313a9114bc05a66be464ec3d5c7b4312e5dd1b972a7aa2b5973848d919a",
+    "car_test/PL/src/video/ov5640_config.v": "adf0428ca7d7347d56b17a2e233e1edb04e49170b9247169d0eabc447439b28f",
+    "car_test/PL/src/video/sccb_master.v": "c4c202e9ab0bf489279f14eeddacc8b57abdfd47fdf81b72d68ecfd7c4a3a471",
+    "car_test/PL/src/video/lpr_vote.v": "4914d287ba69c192c33786b35dba847c68181085b3eee50f54409f76af32a1cb",
+    "car_test/PL/src/video/lpr_health.v": "bfe4b9bc887737a11a1e63097f95df0f4e3c5c0d7111a1d2002ecf99754b629b",
+    "car_test/PL/src/video/lpr_osd.v": "749051eadd7e9fa13bdda37431ae7f396842648a66c6f87864646eacf4bd9255",
+    "car_test/PL/src/cnn/requantize.v": "7760628768a4f46813a4dae17edc3ff16cb94c5981750752befe042404d408af",
+    "car_test/PL/src/comm/uart_rx.v": "837790f1c2edccddcba41be9371eb770d348bc26d7e079f46c427bd91af185a8",
+    "car_test/PL/src/comm/uart_tx.v": "da79da2af68df773fedc2a7b222e5028a4401497347b3439dc09bec8244aeaf4",
+    "car_test/PL/teacher/data/teacher_config.vh": "4d9cefb1f293e41ff224d9c3dfda9c17a27169d68a07eca6531e40263e827238",
+    "car_test/PL/teacher/data/teacher_model_identity.vh": "1e7d5a7ec6d4c7c2d0172f7fff6bb801f53eefc225b5564737a5aa9193ae0ef8",
+    "car_test/PL/teacher/data/model_identity.json": "05cc33f9d50c2b2fb4606eda6372d8dca13406b91f28f19db85244af5d655b71",
+    "car_test/PL/teacher/data/teacher_preprocess.vh": "54ee029aa22875aa12f372d1bf10204f41d8ae90d53270c1c23200381a4793a8",
+    "car_test/PL/teacher/video/preprocess.json": "1dcfa14c47df86b81cbc6f6b4f5b2ec1adb4b70c30505caffc6ef68a20885bca",
+    "car_test/teacher_preprocess.py": "7c40074b6428ffa436c183a5ee623881541a42ab2e7141b074431cf58a696d87",
+    "car_test/PL/data/ov5640_table.vh": "b0e2611ee100e81c75c78a47e4c3d9f366f89c831105b82cb5b571437cc67ee8",
+    "car_test/PL/data/osd_glyphs.vh": "fa11f8fcafb3147338297f4c17897502683a80677817458e2d2b59929a696b83",
+    "car_test/PL/data/ov5640_vga_rgb888.hex": "e85a8cdfe071c3d4ce045d717572a44b0f0a64439522989486dd3e43f8d93090",
+    "car_test/PL/data/osd_font0.hex": "68c62e62693bb1f22ec3c69315ab050b30d4079e402b3da0f14769ab5541019a",
+    "car_test/PL/data/osd_font1.hex": "616a7b610494447c18a86ed56b8f1cced82eb6dffedc4f2291b04f6893206637",
+    "car_test/PL/data/osd_font2.hex": "5a27bd96cf5e606f58072c5d6f15a1411c810818650e854df10c41cf55a1f939",
+    "car_test/PL/data/osd_font3.hex": "283c1a4a43b0d8da1d22d28dcaa4d3a3e34794ffc2203bca69c49e18ba36d3fc",
+    "car_test/PL/teacher/video/teacher_cdc_tb.sv": "f7dfb639a41a397ca7d775ce487111b44a482b8f5a627d222759365c158c7c61",
+    "car_test/PL/teacher/video/teacher_clocks_tb.sv": "037d16d2f83103bdec890d2549458285009f30e8669aa47cce2120288cd2f2e3",
+    "car_test/PL/teacher/video/teacher_live_bridge_tb.sv": "a6949fb1ae6653396e92be3c83d4f9ff41aac7d16506cd869fefbf8853d8b21e",
+    "car_test/PL/teacher/video/teacher_live_memory_tb.sv": "3422cb97fb6b029b7e83fcdf7e3e10c1f4610400817113967b4e2ef80a6f267f",
+    "car_test/PL/teacher/video/teacher_live_system_tb.sv": "ea77bd46d5b492985627966bbf8a09a7922e122bf2ef22f9c8339bc3724c9a8d",
+    "car_test/PL/teacher/video/teacher_resize_equiv_tb.sv": "2e89f4a3d90be1e2f70dd4d621072b90837ef1dff12955dcc1c916a43924fdaf",
+    "car_test/PL/teacher/video/teacher_roi_tb.sv": "35dfd8ea5b5dfc7b50a4352dfccc515d7e6f6b3d239fed24e57e817ce219df66",
+    "car_test/PL/teacher/video/teacher_vote_slow_tb.sv": "68047682f4f085658aa7d00a0bdfac6894b606a4abe30e018188537872a39225",
+    "car_test/PL/sim/video_sdram_model.sv": "46d566729b3e96d7d6dab547a12d6833f5e3f695a22cf8eec713d51ef363a354",
+    "car_test/PL/sim/lpr_vote_tb.sv": "4f4176d92de6361d97ce3400c1ad12940b98695d7f11f39d7fe7f2e0ad0c1ec0",
+    "car_test/PL/sim/lpr_health_tb.sv": "392e5014f2f7fea30defed47df03103a66eb4e916867b072cfffb148f228adf6",
+    "car_test/PL/sim/lpr_osd_tb.sv": "a6aeccc0aa8b63e28ae0e7580dff0b2988a0e8f9d50ade70a21aa4fa44356efb",
+    "car_test/PL/sim/lpr_vote_osd_tb.sv": "2185be3b31155dc38c418607ca8de17de083c1bf4866d386a5367dc159b840bd",
+    "car_test/PL/teacher/data/chars_0.hex": "d3492afadbbadd7ed6a0f9773112e52543ed1514765ba10c8d6169a8a831d9a8",
+    "car_test/PL/teacher/data/chars_1.hex": "970995bf2976ae52b8ef0c7a0af968678972b455d0cbb9e6c6b0312af0a1f756",
+    "car_test/PL/teacher/data/chars_2.hex": "748977509f62392e8287c4e6adf211886c2a3a084bbbf71bafe2f0da9f4ec875",
+    "car_test/PL/teacher/data/input_0.hex": "abfea1a0ddf58eccc3831e6b074e311f5c0b075c4b228bec3714c93ddb41b94e",
+    "car_test/PL/teacher/data/input_1.hex": "1105976c0bbef0c1911af58761c01a36a7c4fb383ca5ed916a33a544d51c4a67",
+    "car_test/PL/teacher/data/input_2.hex": "264dd72aba685c6179d5a18c41e5fd509bb891e41b7efaf6aec465d86e2dc869",
+    "car_test/PL/teacher/data/layer_0_0.hex": "42732ff41b3a6adaaeb6bbe20259132459be8f86eefb457d1ea285db0d7b6a26",
+    "car_test/PL/teacher/data/layer_0_1.hex": "24aa5c344e35a02d48610367877842f24ccda1d4f8ecf73722e3add12a30d0b5",
+    "car_test/PL/teacher/data/layer_0_2.hex": "32379f6ffde74f3c85b6d4528051bf08b9a1faa5fd01e242bf45be9ecd98b122",
+    "car_test/PL/teacher/data/layer_0_3.hex": "9637ee3b53a3a81f02b4299c49535bdbacaeebd67992e0f3688619dc2376069a",
+    "car_test/PL/teacher/data/layer_0_4.hex": "d74b20cc96cc586a70bb557bdabceab02df4365f87843f00c0b508612e261002",
+    "car_test/PL/teacher/data/layer_0_5.hex": "86f76b1b1560253a68d6c41f62844258024f55242884a7a6c2bfa7ffa1b32169",
+    "car_test/PL/teacher/data/layer_0_6.hex": "004036b38bcbacd4cd36b73ac1a37130ff404dfedb8c789d1994275eee5f3ad7",
+    "car_test/PL/teacher/data/layer_0_7.hex": "e8c1f331fbbe65d906120597a96ff4d305bc18db5b6b03065ccca4268c5e6005",
+    "car_test/PL/teacher/data/layer_1_0.hex": "299e78bc1a5073d7aef1a20e0f8b6271f1fd246fbc8e95c5a55719e6ec3c2672",
+    "car_test/PL/teacher/data/layer_1_1.hex": "5bc23390227ae5743a959696621107524f6d0e7d983f7220dc24e1c3c0c73dfc",
+    "car_test/PL/teacher/data/layer_1_2.hex": "f185e8c6f1873c4d312aa9f0647a5894652ae3ad287e1f6b8846dc8439f50dd0",
+    "car_test/PL/teacher/data/layer_1_3.hex": "82479d939fd4baf87e597d0672dfaf9626263fc6cff2d66b171bb3e326fdcb38",
+    "car_test/PL/teacher/data/layer_1_4.hex": "8683ce72fe0d5797b6edb0406f3b2e267404a3c51e39e35d8634485d0fe25347",
+    "car_test/PL/teacher/data/layer_1_5.hex": "00ab42cfcaae9e4d6808095c5ba48b9e86e8b0dc9357cb2ad50a68676327621d",
+    "car_test/PL/teacher/data/layer_1_6.hex": "eced09c754cc24265be0bb3a2cd35c0b8b7139ef96d39963114e95df6b439248",
+    "car_test/PL/teacher/data/layer_1_7.hex": "d8f6a89c137f1ff3f67deaa88c9bc95543ee4ed1d06e736ddccc9e898b322c04",
+    "car_test/PL/teacher/data/layer_2_0.hex": "980d75f31c47e2611fad997cecb2788bfd774c34056e0bef7add9b70241e458f",
+    "car_test/PL/teacher/data/layer_2_1.hex": "69c4d1b03787da2091ff4e12b991346cd50d91876b9ba01c1ce2a498bb925d57",
+    "car_test/PL/teacher/data/layer_2_2.hex": "014149e297dc570ddd725b1b689110234c6860f3fecfcd3d7387b68c89b87254",
+    "car_test/PL/teacher/data/layer_2_3.hex": "10d0fc680d68ec022578e720268e770ed4d8d82e7c2ce5a59ec5bcbe91f1d701",
+    "car_test/PL/teacher/data/layer_2_4.hex": "040ea11e7d7486c7982bd06d046c6e56569449ee85743497d3cf523896c63c88",
+    "car_test/PL/teacher/data/layer_2_5.hex": "d0d0daf4e63e283f9b044f55a78c19a42bdd69cf7d84b953baa5fca58d934789",
+    "car_test/PL/teacher/data/layer_2_6.hex": "8f9c845f6961e0e6aaf759307ebfde3e7096aa81bc9a025bf521816a631ce0b6",
+    "car_test/PL/teacher/data/layer_2_7.hex": "2e73e31aa885b5d2f4fadab9f858fda128cce44e98a82173a03595a242db9531",
+    "car_test/PL/teacher/data/model.hex": "0059c669d41ad80eebcbd8e3d5761bbc74e5117c51ebdb1b62141a87e7dbfd7f",
+    "car_test/PL/teacher/data/preprocess_expected.hex": "12bd3a0e837e46521aec8954d8400b49813555f4c2e232c0f121da2b667daecd",
+    "car_test/PL/teacher/data/preprocess_frame.hex": "77c6be9223ffa4c00c9c01dacd574c193aadfa81c9d59814574872abb79002d6"
+  },
+  "tests": {
+    "teacher_live_clocks_tb": [
+      "# PASS teacher_live_clocks: native PLL 75MHz/180deg SDRAM, 25/125MHz video and 24MHz camera"
+    ],
+    "teacher_roi_tb": [
+      "# PASS teacher_roi: exact 4096 bilinear pixels, two-row rounding, 2 lanes, ownership, newest frame, full and bad EOF"
+    ],
+    "teacher_resize_equiv_tb": [
+      "# PASS teacher_resize_equiv: 4096 random OpenCV pixels, odd rounding/extremes, token pauses, partial EOF rejection and reset recovery"
+    ],
+    "teacher_cdc_tb": [
+      "# PASS teacher_cdc: 401 tagged replies, independent clocks, gaps, backpressure, in-flight reset cancellation and recovery"
+    ],
+    "teacher_live_memory_tb": [
+      "# PASS teacher_live_memory: concurrent video/CNN, 960 transactions, RMW masks, stable capture, fair arbitration, refresh and response stalls"
+    ],
+    "teacher_live_bridge_tb": [
+      "# PASS teacher_live_bridge: exact ROI/CRC, RAM latency, randomized stalls, W/V ACK suppression, I parsing, queued stop and corrupt-CRC gate"
+    ],
+    "teacher_live_bridge_wrong_model": [
+      "# PASS teacher_live_bridge: valid-packet wrong-model CRC blocked inference"
+    ],
+    "teacher_vote_slow_tb": [
+      "# PASS teacher_vote_slow: four distinct results over 3 seconds, five-second expiry and no age wrap or replay vote"
+    ],
+    "lpr_vote_tb": [
+      "# PASS 4-of-6 complete-plate voting, duplicate/old tags, isolated errors and winner replacement",
+      "# PASS strict plate format, bad length/engine rejection, invalid slot eviction and two-second-equivalent expiry",
+      "# PASS frame tag rollover, stale winner expiry under unrelated traffic and reset"
+    ],
+    "lpr_health_tb": [
+      "# PASS health priority: init, camera fault, memory wait, no frame, no result, invalid, pending, confirmed, stale and engine fault",
+      "# PASS raw length/text visibility, heartbeat expiry, stale candidate clearing and camera-fault invalidation"
+    ],
+    "lpr_osd_tb": [
+      "# PASS six full VGA OSD frames against independent Pillow oracle: raw short/illegal characters, length23, votes, confirmation and camera fault",
+      "# PASS 128-bit atomic frame commit, rapid replacement, video sync alignment and reset"
+    ],
+    "lpr_vote_osd_tb": [
+      "# PASS raw-result to vote to frame-boundary OSD integration, outlier hold and expiry"
+    ],
+    "teacher_live_system_tb": [
+      "# PASS teacher_live_system: 3 full VGA RGB888 frames, grayscale preview and ROI border, exact camera ROI in SDRAM, real teacher 8 layer CRCs and 7 CTC characters, zero underflow"
+    ]
+  }
+}

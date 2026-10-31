@@ -1,0 +1,200 @@
+{
+  "format": "lpr-int-pow2-v1",
+  "chars": [
+    "京",
+    "沪",
+    "津",
+    "渝",
+    "冀",
+    "晋",
+    "蒙",
+    "辽",
+    "吉",
+    "黑",
+    "苏",
+    "浙",
+    "皖",
+    "闽",
+    "赣",
+    "鲁",
+    "豫",
+    "鄂",
+    "湘",
+    "粤",
+    "桂",
+    "琼",
+    "川",
+    "贵",
+    "云",
+    "藏",
+    "陕",
+    "甘",
+    "青",
+    "宁",
+    "新",
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+    "I",
+    "O",
+    "-"
+  ],
+  "input_frac": 8,
+  "runtime_rounding": "nearest, ties away from zero",
+  "offline_rounding": "nearest, ties to even",
+  "parameter_sha256": "c7aac9c614792253d400e7c9fcbbcadbf97e18113c3c0f80d6dbf62d89dd1024",
+  "layers": [
+    {
+      "padding": 1,
+      "relu": true,
+      "pool": null,
+      "input_frac": 8,
+      "weight_frac": 5,
+      "output_frac": 4,
+      "output_bits": 8,
+      "calibrated_max": 11.614008903503418
+    },
+    {
+      "padding": 1,
+      "relu": true,
+      "pool": [
+        2,
+        2
+      ],
+      "input_frac": 4,
+      "weight_frac": 8,
+      "output_frac": 5,
+      "output_bits": 8,
+      "calibrated_max": 6.908214092254639
+    },
+    {
+      "padding": 1,
+      "relu": true,
+      "pool": [
+        2,
+        2
+      ],
+      "input_frac": 5,
+      "weight_frac": 7,
+      "output_frac": 4,
+      "output_bits": 8,
+      "calibrated_max": 10.388845443725586
+    },
+    {
+      "padding": 1,
+      "relu": true,
+      "pool": null,
+      "input_frac": 4,
+      "weight_frac": 8,
+      "output_frac": 4,
+      "output_bits": 8,
+      "calibrated_max": 9.11408519744873
+    },
+    {
+      "padding": 1,
+      "relu": true,
+      "pool": [
+        2,
+        1
+      ],
+      "input_frac": 4,
+      "weight_frac": 8,
+      "output_frac": 4,
+      "output_bits": 8,
+      "calibrated_max": 8.479963302612305
+    },
+    {
+      "padding": 1,
+      "relu": true,
+      "pool": [
+        4,
+        1
+      ],
+      "input_frac": 4,
+      "weight_frac": 8,
+      "output_frac": 5,
+      "output_bits": 8,
+      "calibrated_max": 7.123977184295654
+    },
+    {
+      "padding": 0,
+      "relu": true,
+      "pool": null,
+      "input_frac": 5,
+      "weight_frac": 6,
+      "output_frac": 4,
+      "output_bits": 8,
+      "calibrated_max": 14.476083755493164
+    },
+    {
+      "padding": [
+        0,
+        3
+      ],
+      "relu": false,
+      "pool": null,
+      "input_frac": 4,
+      "weight_frac": 7,
+      "output_frac": 8,
+      "output_bits": 16,
+      "calibrated_max": 71.85610961914062
+    }
+  ],
+  "metadata": {
+    "model_options": {
+      "class_num": 68,
+      "input_height": 32,
+      "channels": [
+        16,
+        32,
+        48,
+        64,
+        64,
+        128
+      ],
+      "extra_prepool": true,
+      "context_kernel": 7
+    },
+    "weights_sha256": "5ea1171e364d2512bb1d8a2250a98d19a6bafd60382915902ed1a710c56ce0fd",
+    "input_wh": [
+      128,
+      32
+    ],
+    "calibration_count": 4096,
+    "robust_calibration": true,
+    "fixed_qat_scales": "D:\\xx\\FPGAcompetition\\car_test\\train\\accuracy_stage3\\robust_int8_03",
+    "calibration_partition": "training only",
+    "seed": 2026102605
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-31",
+  "operation": "read-only status using minimal/host/start_camera.py",
+  "no_reconfiguration": true,
+  "no_weight_upload": true,
+  "video_status": {
+    "configured": true,
+    "camera_fault": false,
+    "memory_ready": true,
+    "model_ready": true,
+    "camera_mode": true,
+    "busy": false,
+    "bridge_fault": false,
+    "service_error": false,
+    "fault_code": 0,
+    "retries": 0,
+    "published_frames": 107159,
+    "underflows": 0,
+    "inferences": 16826
+  },
+  "scope": "Protocol and pipeline status only; no recognition accuracy measurement"
+}
