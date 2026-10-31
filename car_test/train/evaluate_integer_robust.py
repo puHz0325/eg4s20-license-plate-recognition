@@ -8,9 +8,9 @@ import numpy as np
 import torch
 
 from integer_reference import IntegerNetwork
-from evaluate_robust_teacher import load_model, camera_examples
+from evaluate_robust_lpr8 import load_model, camera_examples
 from train_highres import save_json, decode_indices
-from robust_teacher import photometric
+from robust_lpr8 import photometric
 from lpr_common import decode_ctc
 from prepare_highres import file_hash
 

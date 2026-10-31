@@ -14,7 +14,7 @@ import traceback
 
 ROOT = Path(__file__).resolve().parents[2]
 STAGE = ROOT/'car_test/train/accuracy_stage3'
-TEACHER = ROOT/'car_test/PL/teacher'
+TEACHER = ROOT/'car_test/PL/lpr8'
 RUN = STAGE/'qat_run_04'
 PACKAGE = STAGE/'robust_int8_04'
 OUTPUT = STAGE/'qat_release_04'
@@ -103,14 +103,14 @@ def main():
         if not summary['validation_qualified']: raise ValueError('QAT validation retention gate failed')
         if sha(RUN/'model_state.pth') != summary['model_state_sha256']: raise ValueError('QAT weights changed')
         config = read(RUN/'config.json')
-        if config['qat_source_sha256'] != sha(Path(__file__).with_name('teacher_qat.py')):
+        if config['qat_source_sha256'] != sha(Path(__file__).with_name('lpr8_qat.py')):
             raise ValueError('QAT implementation changed during training')
         save_status('OFFLINE_EVALUATION', qat=summary)
         python = sys.executable
         if not args.resume_with_qat_audit:
-            command('fixed_audit', [python,'-u','car_test/train/evaluate_robust_teacher.py','--run',RUN,
+            command('fixed_audit', [python,'-u','car_test/train/evaluate_robust_lpr8.py','--run',RUN,
                 '--parent-run','car_test/train/accuracy_stage2/teacher_run','--output',STAGE/'fixed_audit_04'])
-            command('quantize', [python,'-u','car_test/train/quantize_teacher.py','--run',RUN,
+            command('quantize', [python,'-u','car_test/train/quantize_lpr8.py','--run',RUN,
                 '--training-data','car_test/train/highres_v3/data_rehearsal','--main-data','car_test/train/highres_v2/data_quad',
                 '--province-data','car_test/train/highres_v3/data_rehearsal','--robust-calibration',
                 '--fixed-scales',STAGE/'robust_int8_03','--output',PACKAGE])
@@ -123,20 +123,20 @@ def main():
         check_gates(fixed, quantized, stress,qat_audit)
         save_status('GENERATING_RTL_VECTORS', fixed=fixed['metrics'], integer_stress=stress['groups'])
         staging = TEACHER/'candidate_data_20261029_qat04'
-        command('vectors', [python,'-u','car_test/PL/teacher/generate_vectors.py','--package',PACKAGE,
+        command('vectors', [python,'-u','car_test/PL/lpr8/generate_vectors.py','--package',PACKAGE,
             '--float-run',RUN,'--output',staging])
         manifest = read(staging/'manifest.json')
         if any(sha(staging/name) != value for name, value in manifest['files'].items()):
             raise ValueError('Candidate vectors changed')
         for path in staging.iterdir():
             if path.is_file(): shutil.copy2(path,TEACHER/'data'/path.name)
-        command('expected_crcs',[python,'car_test/PL/teacher/board/generate_expected.py'])
+        command('expected_crcs',[python,'car_test/PL/lpr8/board/generate_expected.py'])
         save_status('MODELSIM_AND_TD_MAP')
         powershell = Path('C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe')
         jobs = [
             ('core_sim',[powershell,'-NoProfile','-ExecutionPolicy','Bypass','-File',TEACHER/'sim/run_tests.ps1']),
-            ('video_sim',[python,'-B','car_test/PL/teacher/video/run_tests.py']),
-            ('td_map',[python,'-B','car_test/PL/teacher/video/build_video.py','--stage','map','--output',BUILD,'--seed','2'])]
+            ('video_sim',[python,'-B','car_test/PL/lpr8/video/run_tests.py']),
+            ('td_map',[python,'-B','car_test/PL/lpr8/video/build_video.py','--stage','map','--output',BUILD,'--seed','2'])]
         with ThreadPoolExecutor(max_workers=3) as pool:
             futures = [pool.submit(command,name,arguments) for name,arguments in jobs]
             for future in futures: future.result()
@@ -145,12 +145,12 @@ def main():
         if core['status'] != 'PASS' or core['model_sha256'] != manifest['model_sha256'] or video['status'] != 'PASS':
             raise ValueError('Full ModelSim proof incomplete')
         save_status('TD_PLACE_ROUTE')
-        command('td_pnr',[python,'-B','car_test/PL/teacher/video/build_video.py','--stage','pnr','--output',BUILD,'--seed','2'])
+        command('td_pnr',[python,'-B','car_test/PL/lpr8/video/build_video.py','--stage','pnr','--output',BUILD,'--seed','2'])
         save_status('TD_BITGEN')
-        command('td_bit',[python,'-B','car_test/PL/teacher/video/build_video.py','--stage','bit','--output',BUILD,'--seed','2'])
+        command('td_bit',[python,'-B','car_test/PL/lpr8/video/build_video.py','--stage','bit','--output',BUILD,'--seed','2'])
         identity = read(TEACHER/'data/model_identity.json')
         result = dict(status='READY_FOR_JTAG', hardware_programmed=False, hardware_validated=False,
-            bit=str(BUILD/'teacher_video_p1.bit'), bit_sha256=sha(BUILD/'teacher_video_p1.bit'),
+            bit=str(BUILD/'lpr8_video_p1.bit'), bit_sha256=sha(BUILD/'lpr8_video_p1.bit'),
             model=identity, qat=summary, fixed=fixed['metrics'], clean_int8={k:{a:b for a,b in v.items() if a!='examples'}
                 for k,v in quantized['reports'].items()}, integer_stress=stress['groups'],
             core_compared_elements=core['total_compared_elements'], video_checks=len(video['tests']),

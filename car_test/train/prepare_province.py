@@ -12,7 +12,7 @@ import numpy as np
 
 from prepare_highres import decode_annotation, full_crop_box, digest, file_hash, plate_split
 from lpr_common import CHARS
-from teacher_preprocess import resize_plate_red
+from lpr8_preprocess import resize_plate_red
 
 
 def rectify_red(image, corners):

@@ -1,4 +1,4 @@
-// car_test/PL/teacher/rtl/teacher_byte_reader.v
+// car_test/PL/lpr8/rtl/lpr8_byte_reader.v
 // One-entry 16-byte read cache. Exactly one byte request/response outstanding.
 module teacher_byte_reader (
     input wire clk,input wire reset_n,input wire invalidate,
@@ -44,7 +44,7 @@ module teacher_byte_reader (
     end
 endmodule
 
-// car_test/PL/teacher/rtl/teacher_ctc.v
+// car_test/PL/lpr8/rtl/lpr8_ctc.v
 // Raw CTC with elastic character output. No grammar correction or length padding.
 module teacher_ctc (
     input wire clk,input wire reset_n,input wire start,
@@ -81,7 +81,7 @@ module teacher_ctc (
     end
 endmodule
 
-// car_test/PL/teacher/rtl/teacher_inference.v
+// car_test/PL/lpr8/rtl/lpr8_inference.v
 // Independent 8-lane teacher accelerator. Memory: aligned 128-bit bursts, HWC features.
 module teacher_inference (
     input wire clk,input wire reset_n,input wire model_ready,
@@ -516,7 +516,7 @@ endcase
     end
 endmodule
 
-// car_test/PL/teacher/rtl/teacher_mac8.v
+// car_test/PL/lpr8/rtl/lpr8_mac8.v
 // READ is external, then multiply_enable, then add_enable: one K per 3 clocks.
 module teacher_mac8 (
     input wire clk, input wire reset_n,
@@ -551,7 +551,7 @@ module teacher_mac8 (
     assign overflow=|overflow_lanes;
 endmodule
 
-// car_test/PL/teacher/rtl/teacher_mem_arbiter.v
+// car_test/PL/lpr8/rtl/lpr8_mem_arbiter.v
 // Registered grant, held through response. A pending store gets next idle slot.
 module teacher_mem_arbiter (
     input wire clk,input wire reset_n,
@@ -590,7 +590,7 @@ module teacher_mem_arbiter (
     end
 endmodule
 
-// car_test/PL/teacher/rtl/teacher_patch_buffer.v
+// car_test/PL/lpr8/rtl/lpr8_patch_buffer.v
 module teacher_patch_buffer(
     input wire clk,input wire write_enable,input wire [9:0] write_addr,input wire [8:0] write_data,
     input wire read_enable,input wire [9:0] read_addr,output reg [8:0] read_data
@@ -602,7 +602,7 @@ module teacher_patch_buffer(
     end
 endmodule
 
-// car_test/PL/teacher/rtl/teacher_patch_loader.v
+// car_test/PL/lpr8/rtl/lpr8_patch_loader.v
 // Gather a CHW-ordered convolution window from HWC SDRAM bytes.
 // Iterate ky,kx,ci for coalescing; write k=ci*Kh*Kw+ky*Kw+kx.
 module teacher_patch_loader (
@@ -662,7 +662,7 @@ module teacher_patch_loader (
     end
 endmodule
 
-// car_test/PL/teacher/rtl/teacher_store.v
+// car_test/PL/lpr8/rtl/lpr8_store.v
 // Write 1..16 consecutive bytes; split at burst boundary, wait for every ACK.
 module teacher_store (
     input wire clk,input wire reset_n,
@@ -709,7 +709,7 @@ module teacher_store (
     end
 endmodule
 
-// car_test/PL/teacher/rtl/teacher_weight_buffer.v
+// car_test/PL/lpr8/rtl/lpr8_weight_buffer.v
 // Dedicated simple dual-port block RAM per MAC lane. No reset of storage.
 module teacher_weight_buffer (
     input wire clk,input wire write_enable,input wire [9:0] write_addr,input wire [7:0] write_data,
@@ -722,7 +722,7 @@ module teacher_weight_buffer (
     end
 endmodule
 
-// car_test/PL/teacher/board/teacher_board_service.v
+// car_test/PL/lpr8/board/lpr8_board_service.v
 // UART byte protocol, model CRC, inference, and physical-memory layer CRCs.
 // Generated model integrity gate; protocol and timing remain unchanged.
 `ifndef TEACHER_MODEL_IDENTITY_VH
@@ -959,7 +959,7 @@ module teacher_board_service #(parameter CLOCK_HZ=25000000,VIDEO_STATUS=0)(
     end
 endmodule
 
-// car_test/PL/teacher/board/teacher_sdram_adapter.v
+// car_test/PL/lpr8/board/lpr8_sdram_adapter.v
 // Single outstanding command; preserve bytes via read-modify-write for masks.
 module teacher_sdram_adapter # (parameter INIT_CYCLES=15000,REFRESH_CYCLES=150,SAMPLE_RISING=1)(
     input wire clk,input wire reset_n,input wire [2:0] read_delay,
@@ -1013,7 +1013,7 @@ module teacher_sdram_adapter # (parameter INIT_CYCLES=15000,REFRESH_CYCLES=150,S
     end
 endmodule
 
-// car_test/PL/teacher/board/teacher_sdram_controller.v
+// car_test/PL/lpr8/board/lpr8_sdram_controller.v
 // Diagnostic-specific controller with runtime read-wait calibration.
 // 2M x 32 SDR SDRAM, geometry: bank[20:19], row[18:8], column[7:0].
 // Commands are sampled on the opposite clock edge (phase-shifted memory clock).
@@ -1116,7 +1116,7 @@ module teacher_sdram_controller #(parameter INIT_CYCLES=15000, REFRESH_CYCLES=15
     end
 endmodule
 
-// car_test/PL/teacher/video/teacher_camera_bridge.v
+// car_test/PL/lpr8/video/lpr8_camera_bridge.v
 // Internal ready/valid byte master for camera W->V->I, sharing the proven service.
 // PC commands have priority at transaction boundaries. Internal W/V ACKs stay local.
 // Generated model integrity gate; protocol and timing remain unchanged.
@@ -1255,7 +1255,7 @@ module teacher_camera_bridge(
  end
 endmodule
 
-// car_test/PL/teacher/video/teacher_mem_cdc.v
+// car_test/PL/lpr8/video/lpr8_mem_cdc.v
 // One outstanding request; payloads cross only through dual-clock FIFO storage.
 module teacher_mem_cdc(
  input wire s_clk,s_reset_n,m_clk,m_reset_n,
@@ -1285,8 +1285,8 @@ module teacher_mem_cdc(
   else if(m_rsp_valid && m_rsp_ready) memory_busy<=0;
 endmodule
 
-// car_test/PL/teacher/video/teacher_roi_snapshot.v
-// Generated from teacher/video/preprocess.json; do not hand-edit.
+// car_test/PL/lpr8/video/lpr8_roi_snapshot.v
+// Generated from lpr8/video/preprocess.json; do not hand-edit.
 `ifndef TEACHER_PREPROCESS_VH
 `define TEACHER_PREPROCESS_VH
 `define TEACHER_ROI_X 128
@@ -1457,7 +1457,7 @@ module teacher_roi_plane(
  always @(posedge rd_clk) if(rd_enable) rd_data<=memory[rd_addr];
 endmodule
 
-// car_test/PL/teacher/video/teacher_video_clocks.v
+// car_test/PL/lpr8/video/lpr8_video_clocks.v
 module teacher_video_clocks(input wire clk_50m,reset_n,
  output wire mem_clk,mem_shift,cam_xclk,core_clk,serial_clk,output wire locked);
  wire lm,lv,unused;
@@ -1468,9 +1468,9 @@ module teacher_video_clocks(input wire clk_50m,reset_n,
  assign locked=lm && lv;
 endmodule
 
-// car_test/PL/teacher/video/teacher_video_frontend.v
+// car_test/PL/lpr8/video/lpr8_video_frontend.v
 // Existing full-resolution video transport, exposing its single memory master.
-// Generated from teacher/video/preprocess.json; do not hand-edit.
+// Generated from lpr8/video/preprocess.json; do not hand-edit.
 `ifndef TEACHER_PREPROCESS_VH
 `define TEACHER_PREPROCESS_VH
 `define TEACHER_ROI_X 128
@@ -1511,7 +1511,7 @@ module teacher_video_frontend #(parameter WIDTH=640,HEIGHT=480)(
   req_valid,req_ready,req_write,req_addr,req_data,done,read_data,published,rejected);
 endmodule
 
-// car_test/PL/teacher/video/teacher_video_memory.v
+// car_test/PL/lpr8/video/lpr8_video_memory.v
 // Single owner of physical SDRAM. Video gets up to 3 bursts, then CNN gets one.
 // A 1:1 split cannot sustain VGA capture plus 60Hz display during CNN traffic.
 module teacher_video_memory #(parameter INIT_CYCLES=20000,REFRESH_CYCLES=450)(
@@ -1582,8 +1582,8 @@ module teacher_video_memory #(parameter INIT_CYCLES=20000,REFRESH_CYCLES=450)(
  end
 endmodule
 
-// car_test/PL/teacher/video/teacher_video_system.v
-// Generated from teacher/video/preprocess.json; do not hand-edit.
+// car_test/PL/lpr8/video/lpr8_video_system.v
+// Generated from lpr8/video/preprocess.json; do not hand-edit.
 `ifndef TEACHER_PREPROCESS_VH
 `define TEACHER_PREPROCESS_VH
 `define TEACHER_ROI_X 128
@@ -1694,7 +1694,7 @@ module teacher_video_system #(parameter WIDTH=640,HEIGHT=480,INIT_CYCLES=20000)(
  assign system_error=bridge_fault || service_error;
 endmodule
 
-// car_test/PL/teacher/video/teacher_video_top.v
+// car_test/PL/lpr8/video/lpr8_video_top.v
 module teacher_video_top(
  input wire clk_50m,rst_n,uart_rxd,cam_pclk,cam_vsync,cam_href,input wire [7:0] cam_data,
  output wire uart_txd,cam_xclk,cam_rst_n,cam_pwdn,inout wire cam_scl,cam_sda,

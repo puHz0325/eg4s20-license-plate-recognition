@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "relocated": true,
+  "checks": {
+    "source_and_binary_identity": "PASS",
+    "stdlib_runtime_tests": "PASS",
+    "minimal_model_check": "PASS",
+    "renamed_python_imports": "PASS",
+    "all_python_compile": "PASS",
+    "vlib": "PASS",
+    "vendor_models": "PASS",
+    "legacy_hdl": "PASS",
+    "renamed_hdl": "PASS",
+    "renamed_testbenches": "PASS",
+    "teacher_arithmetic_tb": "PASS",
+    "teacher_ctc_tb": "PASS",
+    "teacher_dma_tb": "PASS",
+    "minimal_rom_elaboration": "PASS",
+    "td_project": "PASS"
+  },
+  "rtl_design_files": 38,
+  "compiled_benches": 21,
+  "normalized_original_build_inputs": 50,
+  "model_and_bit_bytes_unchanged": true,
+  "new_full_inference_regression": false,
+  "new_synthesis_or_route": false,
+  "hardware_download": false
+}

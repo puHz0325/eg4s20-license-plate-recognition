@@ -15,7 +15,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from lpr_common import CHARS
-from teacher_preprocess import resize_plate_red
+from lpr8_preprocess import resize_plate_red
 
 PROVINCES = list('皖沪津渝冀晋蒙辽吉黑苏浙京闽赣鲁豫鄂湘粤桂琼川贵云藏陕甘青宁新') + ['警', '学', 'O']
 ALPHANUMERIC = list('ABCDEFGHJKLMNPQRSTUVWXYZ0123456789O')

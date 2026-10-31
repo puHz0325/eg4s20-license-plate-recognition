@@ -6,3 +6,4 @@
 *.pth -diff
 *.npz -diff
 *.zip -diff
+*.docx -diff

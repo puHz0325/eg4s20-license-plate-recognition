@@ -5,7 +5,7 @@
 ## 使用顺序
 
 1. 按下表接好相机，连接底板HDMI。分别接好JTAG下载USB和核心板CH340串口USB。
-2. TD Download选择JTAG，下载 `fpga/teacher_video_p1.bit`，等待成功提示。
+2. TD Download选择JTAG，下载 `fpga/lpr8_video_p1.bit`，等待成功提示。
 3. 在本目录执行：
 
 ```powershell
@@ -47,10 +47,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\start.ps1
 
 ## 工程文件
 
-- `fpga/teacher_video.al`：相对路径TD工程；顶层 `teacher_video_top`，器件 `EG4S20BG256`。
+- `fpga/lpr8_video.al`：相对路径TD工程；顶层 `teacher_video_top`，器件 `EG4S20BG256`。
 - `fpga/video.v`：完整合并RTL，按随附TD工程的Verilog入口使用。ModelSim仿真使用完整源码包中的分文件脚本，按原规则分别编译Verilog和SystemVerilog。`video.adc/video.sdc`为原版引脚/时序约束。
 - `fpga/assets/`：相机初始化表、4块字库ROM，保持文件相对位置。
-- `fpga/create_project.tcl`：需要时在本机创建新的 `teacher_video_local.al`，不会覆盖已有本机工程。
+- `fpga/create_project.tcl`：需要时在本机创建新的 `lpr8_video_local.al`，不会覆盖已有本机工程。
 - `model/model_init.bin`、`model_identity.json`：156256字节冻结模型，CRC32 `D5CA7402`。
 - `host/start_camera.py --status`：只读状态；`--check-files`：不连接板卡的模型校验。
 

@@ -7,7 +7,7 @@
 ## 最快上板
 
 1. 按 [接线说明](docs/hardware-p1.md) 连接相机、底板HDMI、JTAG下载USB和核心板串口USB。
-2. 使用 Anlogic TD Download 窗口，以 JTAG 模式下载 **`minimal/fpga/teacher_video_p1.bit`**；等待下载成功提示。本包不写Flash。
+2. 使用 Anlogic TD Download 窗口，以 JTAG 模式下载 **`minimal/fpga/lpr8_video_p1.bit`**；等待下载成功提示。本包不写Flash。
 3. 在仓库根目录安装最小依赖并启动：
 
 ```powershell
@@ -24,9 +24,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\minimal\start.ps1
 | 路径 | 用途 |
 | --- | --- |
 | `minimal/` | 可独立复制的最小上板包：bit、TD最小工程、ROM、模型、串口启动程序 |
-| `car_test/PL/teacher/rtl/` | 八层CNN、预取缓冲、MAC、定点量化、CTC等RTL |
-| `car_test/PL/teacher/video/` | 相机、ROI、视频/推理仲裁、CDC、集成顶层及视频测试 |
-| `car_test/PL/teacher/board/` | 串口服务、SDRAM控制器、验证程序及诊断测试 |
+| `car_test/PL/lpr8/rtl/` | 八层CNN、预取缓冲、MAC、定点量化、CTC等RTL |
+| `car_test/PL/lpr8/video/` | 相机、ROI、视频/推理仲裁、CDC、集成顶层及视频测试 |
+| `car_test/PL/lpr8/board/` | 串口服务、SDRAM控制器、验证程序及诊断测试 |
 | `car_test/PL/src/` | 共享采集、HDMI、FIFO、显示、投票和字库模块 |
 | `car_test/train/` | 模型、训练、QAT、整数参考和量化导出源代码 |
 | `verification/`、`release.json` | 冻结源码指纹、原版仿真/资源证据及模型身份 |
@@ -46,6 +46,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\minimal\start.ps1
 
 查看 [验证范围](docs/validation.md)、[架构与存储](docs/architecture.md)、[构建和测试](docs/build-and-test.md)、[串口协议](docs/uart-protocol.md)。
 
+模型迭代的原因、训练配置、评测对照和剩余问题见 [模型优化过程说明 Word](docs/模型优化过程说明.docx)。正文按七层基线模型、八层增强模型命名；训练记录中的参考模型蒸馏损失如实保留。
+
 ## 完整性检查
 
 ```powershell
@@ -54,4 +56,6 @@ python -S minimal/host/start_camera.py --check-files
 python -m unittest discover -s tests -v
 ```
 
-`.gitattributes`保留冻结文件的原始字节和行尾，便于校验与原bit一致的源码/ROM。最小工程的合并RTL只把5个ROM文件路径改为相对路径；预编译bit本身未改动。
+当前文件名统一使用 `lpr8` 表示八层车牌识别模型，主要源码目录为 `car_test/PL/lpr8/`。50个含旧前缀的文件已更名，Python导入、HDL头文件、TD工程和文档引用同步更新。完整对照见 [文件更名说明](docs/filename-migration.md)。
+
+`.gitattributes`保留文件行尾。原50项构建输入通过可逆的文件名/路径替换核验：恢复旧引用后，逐项字节哈希与原bit记录相同。模型、ROM和预编译bit本身保持原字节。最小合并RTL仍使用5个ROM的相对路径。

@@ -33,6 +33,6 @@ HDMI使用底板原插座；FPGA CLK/D0/D1/D2正端球号依次为P1/N1/P4/J3，
 
 板载50MHz输入为R7，复位为E3。CH340串口FPGA RX=F12、TX=D12；分别连接下载USB和串口USB，二者用途不同。摄像头GPIO还连接LCD扩展，运行时不连接占用同组GPIO的并口屏。
 
-当前发布使用 `minimal/fpga/video.adc` 与 `video.sdc`，顶层 `teacher_video_top`。直接下载 `minimal/fpga/teacher_video_p1.bit`；无需运行旧预览工程或切换P2参数。预览为640×480灰度，绿色ROI为(128,176,384,128)，CNN输入128×32。
+当前发布使用 `minimal/fpga/video.adc` 与 `video.sdc`，顶层 `teacher_video_top`。直接下载 `minimal/fpga/lpr8_video_p1.bit`；无需运行旧预览工程或切换P2参数。预览为640×480灰度，绿色ROI为(128,176,384,128)，CNN输入128×32。
 
 连接表沿用原板原理图与实物确认结果，已与本发布ADC逐项核对。不同模块/板卡版本应按其原理图核对供电与排针方向。

@@ -1,0 +1,68 @@
+{
+  "model_sha256": "10e190ea58a2d8706338923bea83ada74eab1e3144e3ab9c4e5918d5b69cb1c4",
+  "integer_package_sha256": "c7aac9c614792253d400e7c9fcbbcadbf97e18113c3c0f80d6dbf62d89dd1024",
+  "layout": "features HWC; final INT16 little-endian; weights OIHW",
+  "cases": [
+    {
+      "case": 0,
+      "source_id": "b11146d88ba6b57aa8ac8982",
+      "label": "浙D5555E",
+      "prediction": "浙D5555E",
+      "character_count": 7,
+      "input_sha256": "abfea1a0ddf58eccc3831e6b074e311f5c0b075c4b228bec3714c93ddb41b94e"
+    },
+    {
+      "case": 1,
+      "source_id": "75f7f117bf5cbc3c4c146e93",
+      "label": "京PQ2A29",
+      "prediction": "京PQ2A29",
+      "character_count": 7,
+      "input_sha256": "1105976c0bbef0c1911af58761c01a36a7c4fb383ca5ed916a33a544d51c4a67"
+    },
+    {
+      "case": 2,
+      "source_id": "synthetic_uniform_u8",
+      "label": null,
+      "prediction": "皖XH3",
+      "character_count": 4,
+      "input_sha256": "264dd72aba685c6179d5a18c41e5fd509bb891e41b7efaf6aec465d86e2dc869"
+    }
+  ],
+  "files": {
+    "chars_0.hex": "d3492afadbbadd7ed6a0f9773112e52543ed1514765ba10c8d6169a8a831d9a8",
+    "chars_1.hex": "970995bf2976ae52b8ef0c7a0af968678972b455d0cbb9e6c6b0312af0a1f756",
+    "chars_2.hex": "748977509f62392e8287c4e6adf211886c2a3a084bbbf71bafe2f0da9f4ec875",
+    "input_0.hex": "abfea1a0ddf58eccc3831e6b074e311f5c0b075c4b228bec3714c93ddb41b94e",
+    "input_1.hex": "1105976c0bbef0c1911af58761c01a36a7c4fb383ca5ed916a33a544d51c4a67",
+    "input_2.hex": "264dd72aba685c6179d5a18c41e5fd509bb891e41b7efaf6aec465d86e2dc869",
+    "layer_0_0.hex": "42732ff41b3a6adaaeb6bbe20259132459be8f86eefb457d1ea285db0d7b6a26",
+    "layer_0_1.hex": "24aa5c344e35a02d48610367877842f24ccda1d4f8ecf73722e3add12a30d0b5",
+    "layer_0_2.hex": "32379f6ffde74f3c85b6d4528051bf08b9a1faa5fd01e242bf45be9ecd98b122",
+    "layer_0_3.hex": "9637ee3b53a3a81f02b4299c49535bdbacaeebd67992e0f3688619dc2376069a",
+    "layer_0_4.hex": "d74b20cc96cc586a70bb557bdabceab02df4365f87843f00c0b508612e261002",
+    "layer_0_5.hex": "86f76b1b1560253a68d6c41f62844258024f55242884a7a6c2bfa7ffa1b32169",
+    "layer_0_6.hex": "004036b38bcbacd4cd36b73ac1a37130ff404dfedb8c789d1994275eee5f3ad7",
+    "layer_0_7.hex": "e8c1f331fbbe65d906120597a96ff4d305bc18db5b6b03065ccca4268c5e6005",
+    "layer_1_0.hex": "299e78bc1a5073d7aef1a20e0f8b6271f1fd246fbc8e95c5a55719e6ec3c2672",
+    "layer_1_1.hex": "5bc23390227ae5743a959696621107524f6d0e7d983f7220dc24e1c3c0c73dfc",
+    "layer_1_2.hex": "f185e8c6f1873c4d312aa9f0647a5894652ae3ad287e1f6b8846dc8439f50dd0",
+    "layer_1_3.hex": "82479d939fd4baf87e597d0672dfaf9626263fc6cff2d66b171bb3e326fdcb38",
+    "layer_1_4.hex": "8683ce72fe0d5797b6edb0406f3b2e267404a3c51e39e35d8634485d0fe25347",
+    "layer_1_5.hex": "00ab42cfcaae9e4d6808095c5ba48b9e86e8b0dc9357cb2ad50a68676327621d",
+    "layer_1_6.hex": "eced09c754cc24265be0bb3a2cd35c0b8b7139ef96d39963114e95df6b439248",
+    "layer_1_7.hex": "d8f6a89c137f1ff3f67deaa88c9bc95543ee4ed1d06e736ddccc9e898b322c04",
+    "layer_2_0.hex": "980d75f31c47e2611fad997cecb2788bfd774c34056e0bef7add9b70241e458f",
+    "layer_2_1.hex": "69c4d1b03787da2091ff4e12b991346cd50d91876b9ba01c1ce2a498bb925d57",
+    "layer_2_2.hex": "014149e297dc570ddd725b1b689110234c6860f3fecfcd3d7387b68c89b87254",
+    "layer_2_3.hex": "10d0fc680d68ec022578e720268e770ed4d8d82e7c2ce5a59ec5bcbe91f1d701",
+    "layer_2_4.hex": "040ea11e7d7486c7982bd06d046c6e56569449ee85743497d3cf523896c63c88",
+    "layer_2_5.hex": "d0d0daf4e63e283f9b044f55a78c19a42bdd69cf7d84b953baa5fca58d934789",
+    "layer_2_6.hex": "8f9c845f6961e0e6aaf759307ebfde3e7096aa81bc9a025bf521816a631ce0b6",
+    "layer_2_7.hex": "2e73e31aa885b5d2f4fadab9f858fda128cce44e98a82173a03595a242db9531",
+    "model.hex": "0059c669d41ad80eebcbd8e3d5761bbc74e5117c51ebdb1b62141a87e7dbfd7f",
+    "model_identity.json": "05cc33f9d50c2b2fb4606eda6372d8dca13406b91f28f19db85244af5d655b71",
+    "lpr8_config.vh": "4d9cefb1f293e41ff224d9c3dfda9c17a27169d68a07eca6531e40263e827238",
+    "lpr8_model_identity.vh": "1e7d5a7ec6d4c7c2d0172f7fff6bb801f53eefc225b5564737a5aa9193ae0ef8",
+    "lpr8_test_meta.vh": "90bd35f633af4822e0e291751a8d65226e14b028e6aad27f1a5a9d81c3e8c861"
+  }
+}

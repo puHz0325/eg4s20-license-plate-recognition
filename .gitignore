@@ -13,6 +13,6 @@ __pycache__/
 tmp/
 minimal/logs/
 minimal/fpga/work/
-car_test/PL/teacher/td/
+car_test/PL/lpr8/td/
 .DS_Store
 Thumbs.db

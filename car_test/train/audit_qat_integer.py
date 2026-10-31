@@ -11,8 +11,8 @@ import torch
 from exact_integer_gpu import ExactIntegerGPU
 from integer_reference import IntegerNetwork,file_hash
 from model import FPGA_LPRNet
-from teacher_qat import FixedScaleTeacher
-from robust_teacher import RobustPlates,pair_report
+from lpr8_qat import FixedScaleTeacher
+from robust_lpr8 import RobustPlates,pair_report
 from train_highres import CachedPlates,decode_indices,alignment_counts,save_json
 
 ROOT=Path(__file__).resolve().parents[2]

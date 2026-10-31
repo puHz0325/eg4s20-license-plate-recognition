@@ -2,7 +2,7 @@
   "format": "eg4s20-recognition-release-v1",
   "date": "2026-10-31",
   "top": "teacher_video_top",
-  "bit": "minimal/fpga/teacher_video_p1.bit",
+  "bit": "minimal/fpga/lpr8_video_p1.bit",
   "bit_sha256": "0dcc73e3fa692c37b07edd84f24ebd36e31a0a3f0a66558b2e7cddcefa229538",
   "model": {
     "format": "teacher-model-identity-v1",
@@ -14,7 +14,7 @@
     "float_run": "car_test/train/accuracy_stage3/qat_run_04",
     "float_sha256": "5ea1171e364d2512bb1d8a2250a98d19a6bafd60382915902ed1a710c56ce0fd"
   },
-  "source_layout": "Original car_test tree retained; host build/test paths configurable",
+  "source_layout": "lpr8 delivery filenames and directory; internal RTL/protocol identifiers remain compatible",
   "camera": {
     "interface": "OV5640 DVP",
     "source_wh": [
@@ -74,7 +74,7 @@
     "video_checks": 13,
     "cnn_compared_elements": 475648
   },
-  "minimal_source_changes": "Only ROM asset path prefixes changed; prebuilt bit unchanged",
+  "minimal_source_changes": "ROM path prefixes and source filename comments only; prebuilt bit unchanged",
   "model_loading": "UART after each FPGA reconfiguration/power-up; no Flash writer",
   "limitations": [
     "Fixed-position single seven-character plate",
@@ -88,5 +88,6 @@
     "opencv-python": "4.12.0.88",
     "torch": "2.10.0+cu130",
     "Pillow": "12.1.0"
-  }
+  },
+  "filename_revision": "lpr8-20261031"
 }

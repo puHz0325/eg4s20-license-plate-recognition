@@ -1,7 +1,7 @@
 if {[catch {
     cd [file dirname [file normalize [info script]]]
-    if {[file exists teacher_video_local.al]} {error "Preserve existing teacher_video_local.al; use the existing project or a fresh directory."}
-    create_project -family EG4 -device EG4S20BG256 teacher_video_local [pwd]
+    if {[file exists lpr8_video_local.al]} {error "Preserve existing lpr8_video_local.al; use the existing project or a fresh directory."}
+    create_project -family EG4 -device EG4S20BG256 lpr8_video_local [pwd]
     add_files -analyze video.v
     add_files video.adc
     add_files video.sdc
